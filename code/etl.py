@@ -18,8 +18,7 @@ with open('stop.txt') as f:
     stop = f.read().split("\n")
 
 #Eliminar los articulos de la lista
-stop_words = ["a","en","las","el","de","lo", "un","te","la","que","es"]
-words_clean = [word for word in words if word not in stop_words]
+words_clean = [word for word in words if word not in stop]
 words_clean
 text = " ".join(words_clean)
 print(text)
