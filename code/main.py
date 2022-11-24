@@ -5,7 +5,7 @@ from wordcloud import WordCloud
 import matplotlib.pyplot as plt
 import sys
 text  = " ".join(sys.stdin)
-print(text)
+#print(text)
 #text = open( '../l1.txt').read()
 # Generate a word cloud image
 wordcloud = WordCloud().generate(text)

@@ -1,1 +1,1 @@
-python3 etl.py roberto.txt | python3  main.py roberto
+python3 web_scrapper.py | python3 etl.py | python3 main.py foreword

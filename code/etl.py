@@ -4,20 +4,25 @@ import numpy as np
 import matplotlib.pyplot as plt
 import sys
 #Extract the name of the file from the arguments
-file_name = sys.argv[1]
+#file_name = sys.argv[1]
 
 lines = []
-with open('../data/'+file_name) as f:
-    words = f.read().replace(",","").replace(")","").replace("(","").split(" ")
-words = list(map( lambda x : x.split("\n"),words))
-words = [item for word in words for item in word]
 
+for line in sys.stdin:
+    lines.append(line
+    .replace(",","")
+    .replace(")","")
+    .replace("(","")
+    .replace("[","")
+    .replace("]","").split(" "))
+words = [item for word in lines for item in word]
+words = list(map( lambda x : x.replace("\n",""),words))
 #Build the stopwords list
 stop = []
 with open('stop.txt') as f:
     stop = f.read().split("\n")
 
-#Eliminar los articulos de la lista
+# #Eliminar los articulos de la lista
 words_clean = [word for word in words if word not in stop]
 words_clean
 text = " ".join(words_clean)
