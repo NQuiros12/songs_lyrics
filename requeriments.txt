@@ -1,0 +1,5 @@
+pandas
+lyricsgenius
+fastapi
+uvicorn[standard]
+jinja2
