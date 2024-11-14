@@ -11,6 +11,6 @@ soup = BeautifulSoup(page.content, "html.parser")
 
 
 results = soup.find_all("div",class_="ringtone")
-if results is None: print("vacio")
+print("vacio") if results is None else print("")
 lyrics_raw = results[0].find_next_sibling("div")
 print(lyrics_raw.get_text())
